@@ -34,7 +34,9 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body"><header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-e6ca"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
+  <body class="u-body">
+    <!--------------- Header -------------------------------------------------->
+    <header class="u-clearfix u-custom-color-1 u-header u-header" id="sec-e6ca"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-position="Header Tags">
           <div class="menu-collapse">
             <a class="u-button-style u-nav-link" href="#">
@@ -68,49 +70,42 @@
         <h2 class="u-text u-text-default u-text-1">Denis Law Legacy Trust&nbsp;</h2>
         <a href="Mark-Attendance.html" data-page-id="2941722008" class="u-border-none u-btn u-button-style u-text-custom-color-1 u-white u-btn-1">Mark Attendance</a>
       </div></header>
-    <section class="u-align-center u-clearfix u-grey-5 u-section-1" id="sec-7be2">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-text-1">Create Account</h1>
-        <div class="u-form u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="custom" name="form">
-            <div class="u-form-group u-form-name">
-              <label for="name-3b9a" class="u-form-control-hidden u-label u-label-1">Name</label>
-              <input type="text" placeholder="Enter your Name" id="name-3b9a" name="name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="">
-            </div>
-            <div class="u-form-date u-form-group u-form-group-2">
-              <label for="date-3cf9" class="u-form-control-hidden u-label u-label-2"></label>
-              <input type="date" placeholder="Enter Your Age" id="date-3cf9" name="date" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-2" required="">
-            </div>
-            <div class="u-form-address u-form-group u-form-group-3">
-              <label for="address-2c87" class="u-form-control-hidden u-label u-label-3"></label>
-              <input type="text" placeholder="Enter your postcode" id="address-2c87" name="postcode" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-3" required="">
-            </div>
-            <div class="u-form-group u-form-name u-form-group-4">
-              <label for="name-6ea1" class="u-form-control-hidden u-label u-label-4"></label>
-              <input type="text" placeholder="ENTER YOUR PASSWORD" id="name-6ea1" name="password" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-4" required="">
-            </div>
-            <h3 class="u-text u-text-default u-text-1">Enter your Emergency Contacts Details</h3>
-            <div class="u-form-group u-form-name u-form-group-6">
-              <label for="name-8f96" class="u-form-control-hidden u-label u-label-6"></label>
-              <input type="text" placeholder="Enter their Name" id="name-8f96" name="EC Name" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-6" required="">
-            </div>
-            <div class="u-form-group u-form-phone u-form-group-7">
-              <label for="phone-5f9f" class="u-form-control-hidden u-label u-label-7"></label>
-              <input type="tel" pattern="\+?\d{0,3}[\s\(\-]?([0-9]{2,3})[\s\)\-]?([\s\-]?)([0-9]{3})[\s\-]?([0-9]{2})[\s\-]?([0-9]{2})" placeholder="Enter their phone number(e.g. +14155552675)" id="phone-5f9f" name="EC phone" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-7" required="">
-            </div>
-            <div class="u-align-center u-form-group u-form-submit">
-              <a href="#" class="u-border-2 u-border-black u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1">Submit</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
-            </div>
-            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
-            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
-        </div>
-      </div>
-    </section>
-    
-    
+
+      <body>
+        <!--------------- Main -------------------------------------------------->
+        <main>
+          <div id="form">
+            <!-- form with entry box for each bit of inomfrtaion we want from our user. -->
+            <h1 id="heading">Create An Account</h1>
+            <!-- submits to our /adduser route. (inspired by lab 16)-->
+            <form action="/adduser" method="POST">
+              <!-- Name parameters-->
+              <label>Name</label>
+              
+              <input type="text" placeholder="first" name="first">
+              <input type="text" placeholder="last"  name="last">
+              <!-- Login parameters -->
+            </br><label>Login</label>
+            <input type="email" placeholder="me@example.com"    name="email">
+            <input type="text" placeholder="username"     name="username">
+            <input type="password" placeholder="password"  name="password">
+              <!-- Detail parameters -->
+            </br><label>Details</label>
+            <input type ="text" placeholder="post code" name ="postcode">
+            <input type="datetime" placeholder="date of birth"    name="dob">
+            <input type="text" placeholder="contactinfo" name="contact">
+          
+              <!-- The button to create the account -->
+              </br><button type="submit">Submit</button>
+            </form>
+          </div>
+          <!-- The image for join us -->
+          
+        </main>
+      </body>
+   
+
+      <!--------------- Footer -------------------------------------------------->
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-eccd"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Denis Law Legacy Trust - Charity Number:<br>SC 043169
         </p>
