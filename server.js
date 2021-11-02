@@ -9,24 +9,24 @@ app.listen(8080)
 
 //Default page
 app.get('/', function(req,res){
-    res.render('pages/login');
+    res.render('Pages/Login');
     console.log('---- Displaying Login page ----')
 });
 
 //Register page
-app.get('/register', function(req, res){
-    res.render('pages/register')
+app.get('/Register', function(req, res){
+    res.render('Pages/Register')
     console.log('---- Displaying Register page ----')
 });
 
 //Attendane Page
-app.get('/attendance', function(req, res){
-    res.render('pages/attendance')
+app.get('/Attendance', function(req, res){
+    res.render('Pages/Mark-Attendance')
     console.log('---- Displaying Attendance page ----')
 });
 
 //Profile Page
-app.get('/profile', function(req, res){
-    res.render('pages/profile')
+app.get('/Profile', function(req, res){
+    res.render('Pages/Profile')
     console.log('---- Displaying Profile page ----')
 });
