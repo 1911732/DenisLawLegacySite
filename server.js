@@ -9,7 +9,7 @@ app.listen(8080)
 
 //Default page
 app.get('/', function(req,res){
-    res.render('Pages/Login');
+    res.render('Views/Pages/Login');
     console.log('---- Displaying Login page ----')
 });
 
